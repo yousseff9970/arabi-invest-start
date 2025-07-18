@@ -164,7 +164,7 @@ All colors MUST be HSL.
 
   .glow-effect::before {
     content: '';
-    @apply absolute inset-0 rounded-inherit;
+    @apply absolute inset-0 rounded-2xl;
     background: var(--gradient-primary);
     opacity: 0.1;
     filter: blur(20px);
