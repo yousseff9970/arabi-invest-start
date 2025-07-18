@@ -1,5 +1,6 @@
 import { ArrowLeft, TrendingUp, Shield, Award } from "lucide-react";
 import { Button } from "./ui/button";
+import RegistrationForm from "./RegistrationForm";
 import heroImage from "@/assets/hero-investment.jpg";
 
 const HeroSection = () => {
@@ -47,13 +48,17 @@ const HeroSection = () => {
             </div>
 
             <div className="space-y-4 fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <Button 
-                size="lg" 
-                className="btn-premium w-full sm:w-auto text-xl px-12 py-6 group"
-              >
-                سجّل الآن واكتشف العرض الخاص بك
-                <ArrowLeft className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <RegistrationForm
+                trigger={
+                  <Button 
+                    size="lg" 
+                    className="btn-premium w-full sm:w-auto text-xl px-12 py-6 group"
+                  >
+                    سجّل الآن واكتشف العرض الخاص بك
+                    <ArrowLeft className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                }
+              />
               
               <p className="text-sm text-muted-foreground">
                 🎯 العرض محدود للمستخدمين الجدد فقط

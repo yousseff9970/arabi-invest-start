@@ -1,5 +1,6 @@
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
+import RegistrationForm from "./RegistrationForm";
 import { Clock, Gift, ArrowLeft, Zap, Users, Star } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -138,10 +139,14 @@ const UrgencySection = () => {
 
         {/* Final CTA */}
         <div className="text-center space-y-6 fade-in-up" style={{ animationDelay: '1.2s' }}>
-          <Button size="lg" className="btn-premium group text-xl px-16 py-8 animate-pulse">
-            سجّل الآن قبل انتهاء العرض
-            <ArrowLeft className="mr-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <RegistrationForm
+            trigger={
+              <Button size="lg" className="btn-premium group text-xl px-16 py-8 animate-pulse">
+                سجّل الآن قبل انتهاء العرض
+                <ArrowLeft className="mr-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            }
+          />
           
           <div className="space-y-2">
             <p className="text-lg font-bold text-destructive arabic-text">
