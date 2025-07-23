@@ -6,10 +6,15 @@ import heroImage from "@/assets/hero-investment.jpg";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
-      {/* Background glow effects */}
+      {/* Enhanced background effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-gold/5"></div>
-      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(76,175,80,0.15),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,193,7,0.1),transparent_50%)]"></div>
+      
+      {/* Floating elements */}
+      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float-slow"></div>
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-gold/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/2 left-10 w-32 h-32 bg-success/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -52,7 +57,7 @@ const HeroSection = () => {
                 trigger={
                   <Button 
                     size="lg" 
-                    className="btn-premium w-full sm:w-auto text-xl px-12 py-6 group"
+                    className="btn-premium w-full sm:w-auto text-xl px-12 py-6 group shine-effect"
                   >
                     سجّل الآن واكتشف العرض الخاص بك
                     <ArrowLeft className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -60,9 +65,11 @@ const HeroSection = () => {
                 }
               />
               
-              <p className="text-sm text-muted-foreground">
-                🎯 العرض محدود للمستخدمين الجدد فقط
-              </p>
+              <div className="flex items-center justify-center lg:justify-end gap-2 text-sm">
+                <div className="w-2 h-2 bg-gold rounded-full animate-pulse"></div>
+                <span className="text-muted-foreground">🎯 العرض محدود للمستخدمين الجدد فقط</span>
+                <div className="w-2 h-2 bg-gold rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+              </div>
             </div>
           </div>
 
@@ -77,18 +84,24 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-3xl"></div>
             </div>
             
-            {/* Floating stats */}
-            <div className="absolute -top-6 -right-6 bg-card/90 backdrop-blur-sm rounded-2xl p-4 shadow-card border border-border/20 fade-in-up" style={{ animationDelay: '0.6s' }}>
+            {/* Enhanced floating stats */}
+            <div className="absolute -top-6 -right-6 bg-card/90 backdrop-blur-sm rounded-2xl p-4 shadow-card border border-success/20 fade-in-up hover:scale-110 transition-transform duration-300 group cursor-pointer" style={{ animationDelay: '0.6s' }}>
               <div className="text-center">
-                <div className="text-2xl font-bold text-success">+٢٥٪</div>
+                <div className="text-2xl font-bold text-success group-hover:scale-110 transition-transform">+٢٥٪</div>
                 <div className="text-xs text-muted-foreground">العائد الشهري</div>
+                <div className="w-full h-1 bg-success/20 rounded-full mt-2 overflow-hidden">
+                  <div className="h-full bg-success rounded-full w-3/4 animate-pulse"></div>
+                </div>
               </div>
             </div>
             
-            <div className="absolute -bottom-6 -left-6 bg-card/90 backdrop-blur-sm rounded-2xl p-4 shadow-card border border-border/20 fade-in-up" style={{ animationDelay: '0.8s' }}>
+            <div className="absolute -bottom-6 -left-6 bg-card/90 backdrop-blur-sm rounded-2xl p-4 shadow-card border border-gold/20 fade-in-up hover:scale-110 transition-transform duration-300 group cursor-pointer" style={{ animationDelay: '0.8s' }}>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gold">١٠٠+</div>
+                <div className="text-2xl font-bold text-gold group-hover:scale-110 transition-transform">١٠٠+</div>
                 <div className="text-xs text-muted-foreground">عملة رقمية</div>
+                <div className="w-full h-1 bg-gold/20 rounded-full mt-2 overflow-hidden">
+                  <div className="h-full bg-gold rounded-full w-full animate-shimmer"></div>
+                </div>
               </div>
             </div>
           </div>

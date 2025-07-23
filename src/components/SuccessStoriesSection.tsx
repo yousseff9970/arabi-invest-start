@@ -44,56 +44,66 @@ const SuccessStoriesSection = () => {
           </p>
         </div>
 
-        {/* Featured success story */}
+        {/* Enhanced featured success story */}
         <div className="max-w-4xl mx-auto mb-16">
-          <Card className="card-premium bg-gradient-to-br from-success/5 to-gold/5 border-success/20 overflow-hidden fade-in-up">
+          <Card className="card-premium bg-gradient-to-br from-success/5 to-gold/5 border-success/20 overflow-hidden fade-in-up group hover:border-success/40 transition-all duration-500">
             <div className="grid md:grid-cols-2 gap-8 p-8">
               <div className="space-y-6">
                 <div className="flex items-center gap-2">
-                  <TrendingUp className="w-6 h-6 text-success" />
-                  <span className="text-success font-medium">قصة نجاح مميزة</span>
+                  <TrendingUp className="w-6 h-6 text-success animate-bounce-in" />
+                  <span className="text-success font-medium animate-shimmer bg-gradient-to-r from-success to-success/70 bg-clip-text">قصة نجاح مميزة</span>
                 </div>
                 
-                <h3 className="text-3xl font-bold arabic-text">
+                <h3 className="text-3xl font-bold arabic-text group-hover:text-success transition-colors duration-300">
                   سعود بدأ بـ١٠٠ ريال واليوم استثمر بثقة...
                 </h3>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed arabic-text">
                   قصته؟ تقدر تشوفها بعد ما تسجّل 👀
                   <br />
-                  <span className="text-success font-medium">
+                  <span className="text-success font-medium animate-pulse">
                     وتقدر تحقق نفس النتائج أو أحسن!
                   </span>
                 </p>
 
-                <div className="flex items-center gap-4">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-success">+٢٣٥٪</div>
+                <div className="flex items-center gap-6">
+                  <div className="text-center group/stat hover:scale-110 transition-transform duration-300">
+                    <div className="text-3xl font-bold text-success group-hover/stat:animate-bounce">+٢٣٥٪</div>
                     <div className="text-sm text-muted-foreground">العائد</div>
+                    <div className="w-full h-1 bg-success/20 rounded-full mt-1 overflow-hidden">
+                      <div className="h-full bg-success rounded-full w-4/5 animate-gradient-x bg-gradient-to-r from-success to-success/70"></div>
+                    </div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-gold">٦</div>
+                  <div className="text-center group/stat hover:scale-110 transition-transform duration-300">
+                    <div className="text-3xl font-bold text-gold group-hover/stat:animate-bounce">٦</div>
                     <div className="text-sm text-muted-foreground">أشهر</div>
+                    <div className="w-full h-1 bg-gold/20 rounded-full mt-1 overflow-hidden">
+                      <div className="h-full bg-gold rounded-full w-3/5 animate-gradient-x bg-gradient-to-r from-gold to-gold/70"></div>
+                    </div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">١٠٠</div>
+                  <div className="text-center group/stat hover:scale-110 transition-transform duration-300">
+                    <div className="text-3xl font-bold text-primary group-hover/stat:animate-bounce">١٠٠</div>
                     <div className="text-sm text-muted-foreground">ريال بداية</div>
+                    <div className="w-full h-1 bg-primary/20 rounded-full mt-1 overflow-hidden">
+                      <div className="h-full bg-primary rounded-full w-full animate-gradient-x bg-gradient-to-r from-primary to-primary/70"></div>
+                    </div>
                   </div>
                 </div>
 
-                <Button className="btn-premium group">
+                <Button className="btn-premium group/btn shine-effect">
                   اكتشف قصة سعود الكاملة
-                  <ArrowLeft className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowLeft className="mr-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                 </Button>
               </div>
 
-              <div className="relative">
+              <div className="relative group/image">
                 <img 
                   src={successImage} 
                   alt="Success Story"
-                  className="w-full h-full object-cover rounded-xl shadow-lg"
+                  className="w-full h-full object-cover rounded-xl shadow-lg group-hover/image:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent rounded-xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent rounded-xl group-hover/image:from-background/20 transition-all duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-success/10 via-transparent to-gold/10 rounded-xl opacity-0 group-hover/image:opacity-100 transition-opacity duration-500"></div>
               </div>
             </div>
           </Card>

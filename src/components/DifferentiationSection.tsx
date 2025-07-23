@@ -63,21 +63,24 @@ const DifferentiationSection = () => {
           {features.map((feature, index) => (
             <Card 
               key={index}
-              className="card-premium group hover:shadow-glow transition-all duration-500 cursor-pointer fade-in-up border-border/20 bg-card/50 backdrop-blur-sm"
+              className="card-premium group hover:shadow-glow transition-all duration-500 cursor-pointer fade-in-up border-border/20 bg-card/50 backdrop-blur-sm shine-effect"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="p-8 text-center space-y-4">
-                <div className={`w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className={`w-8 h-8 ${feature.color}`} />
+              <div className="p-8 text-center space-y-4 relative z-10">
+                <div className={`w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}>
+                  <feature.icon className={`w-8 h-8 ${feature.color} group-hover:scale-110 transition-transform duration-300`} />
                 </div>
                 
-                <h3 className="text-xl font-bold arabic-text group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold arabic-text group-hover:text-primary transition-colors duration-300">
                   {feature.title}
                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed arabic-text">
+                <p className="text-muted-foreground leading-relaxed arabic-text group-hover:text-foreground transition-colors duration-300">
                   {feature.description}
                 </p>
+                
+                {/* Hover gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               </div>
             </Card>
           ))}
